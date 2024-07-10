@@ -1,60 +1,129 @@
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4ff;
+    margin: 0;
+    padding: 0;
 }
 
-.contenedor {
-    width: 80%;
-    margin: 0 auto;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
     background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-header {
+/* Encabezado */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #eee;
 }
 
-header img {
-    height: 50px;
+.header img {
+    height: 40px;
 }
 
-header h1 {
-    flex-grow: 1;
-    text-align: center;
+.header h1 {
+    font-size: 24px;
+    color: #8a00c2;
 }
 
-.filtros {
-    margin-bottom: 20px;
+.header a {
+    color: #000000;
+    text-decoration: none;
 }
 
-.filtros label {
+.header a.logout img {
+    margin-left: 0px;
+    height: 16px; /* Ajusta el tamaño del ícono según sea necesario */
+}
+
+/* Filtros */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.filters label {
     margin-right: 10px;
 }
 
-table {
+.filters select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Tabla */
+.table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 10px;
+.table th, .table td {
     text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
 }
 
-th {
-    background-color: #f4f4f4;
+.table th {
+    background-color: #8a00c2;
+    color: #fff;
 }
 
-tfoot td {
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table td:last-child {
+    text-align: right;
+}
+
+/* Total */
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 2px solid #eee;
+}
+
+.total span {
+    font-size: 18px;
     font-weight: bold;
+}
+
+/* Otros estilos */
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.select-wrapper::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #aaa;
+}
+
+.select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 30px;
 }

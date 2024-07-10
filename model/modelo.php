@@ -1,6 +1,7 @@
-
 <?php
-class Orden
+require_once "../conexion.php";
+
+class Order
 {
     private $db;
 
@@ -9,15 +10,22 @@ class Orden
         $this->db = $db;
     }
 
-    public function obtenerOrdenes($mes, $estado)
+    public function getOrders($month, $status)
     {
-        $consulta = "SELECT nombre_cliente, correo_cliente, COUNT(*) as numero_ordenes, SUM(monto) as monto_total 
-                    FROM orders 
-                    WHERE MONTH(fecha_orden) = ? AND estado = ? 
-                    GROUP BY nombre_cliente, correo_cliente 
-                    ORDER BY monto_total DESC";
-        $stmt = $this->db->prepare($consulta);
-        $stmt->execute([$mes, $estado]);
+        $sql = "SELECT 
+                    last_name,
+                    email,
+                    COUNT(*) AS order_num,
+                    SUM(total) AS total_amount
+                FROM orders
+                WHERE 
+                    MONTH(date_placed) = ?
+                    AND status = ?
+                GROUP BY last_name, email
+                ORDER BY total_amount DESC";
+
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute([$month, $status]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

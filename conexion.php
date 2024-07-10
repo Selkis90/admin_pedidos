@@ -1,6 +1,6 @@
 <?php
 
-require_once './parametros.php';
+require_once 'parametros.php';
 
 
 // Definición de variables para la conexión a la base de datos
@@ -22,4 +22,3 @@ if ($conexion->connect_error) {
     // Si hay un error en la conexión, se muestra un mensaje de error y se termina la ejecución del script
     die("Error al conectarse a la base de datos: " . $conexion->connect_error);
 }
-

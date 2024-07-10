@@ -1,14 +1,16 @@
-// controladores/ControladorOrden.php
 <?php
-class ControladorOrden {
-    private $modeloOrden;
+require_once "../conexion.php";
+require_once "../model/modelo.php";
 
-    public function __construct($modeloOrden) {
-        $this->modeloOrden = $modeloOrden;
+class OrderController {
+    private $model;
+
+    public function __construct($model) {
+        $this->model = $model;
     }
 
-    public function obtenerOrdenes($mes, $estado) {
-        return $this->modeloOrden->obtenerOrdenes($mes, $estado);
+    public function getOrders($month, $status) {
+        return $this->model->getOrders($month, $status);
     }
 }
 ?>
