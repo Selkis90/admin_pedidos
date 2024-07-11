@@ -15,9 +15,9 @@ $mes = $_POST['mes'];
 $estado = $_POST['estado'];
 
 $query = "SELECT first_name, last_name, email, COUNT(order_num) AS numero_ordenes, SUM(total) AS total_ordenes
-          FROM orders 
-          WHERE MONTH(date_placed) = ? AND status = ?
-          GROUP BY email";
+        FROM orders 
+        WHERE MONTH(date_placed) = ? AND status = ?
+        GROUP BY email";
 
 $stmt = $conexion->prepare($query);
 $stmt->bind_param('ii', $mes, $estado);
