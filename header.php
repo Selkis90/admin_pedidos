@@ -10,7 +10,7 @@
     <header class="header">
         <img src="./img/logo-total.png" alt="logo total">
         <h1>ERP - TIENDA ROSATEL</h1>
-        <a href="logout.php" class="logout">
+        <a href="./view/salir.php" class="logout">
         Salir
         <img class="logout" src="./img/logout.svg" alt="icono salir">
     </a>

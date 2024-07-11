@@ -1,6 +1,6 @@
 <?php
-require_once "../conexion.php";
-require_once "../model/modelo.php";
+require_once '../conexion.php';
+require_once '../model/modelo.php';
 
 class OrderController {
     private $model;
