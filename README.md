@@ -9,7 +9,7 @@ Admin_Pedidos es una aplicación web diseñada para gestionar y consultar pedido
 
 ### Paso a Paso de Configuración del Host Virtual
 1. **Crear Host Virtual:**
-   - Sigue las instrucciones detalladas en el archivo [paso a paso virtual host actual.pdf](paso%20a%20paso%20virtual%20host%20actual.pdf) para configurar un host virtual en tu servidor.
+   - configure un ambiente donde pueda probar php o host virtual en tu servidor.
 
 ### Clonar Repositorio
 2. **Clonar Repositorio:**
@@ -25,7 +25,7 @@ Admin_Pedidos es una aplicación web diseñada para gestionar y consultar pedido
 
 ### Acceso al Proyecto
 4. **Acceso al Proyecto:**
-   - Abre tu navegador web y navega a `admin_pedidos.test`.
+   - Abre tu navegador web y navega a hacia tu direccion local o hacia su host virtual.
    - Esto debería dirigirte a la aplicación Admin_Pedidos lista para su uso.
 
 ## Estructura del Proyecto
